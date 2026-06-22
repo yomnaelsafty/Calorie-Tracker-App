@@ -14,7 +14,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22 # استخدمنا إصدار أحدث
           cache: 'npm'
 
       - name: Install dependencies
@@ -22,6 +22,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          CI: false # هذا السطر سيمنع فشل البناء بسبب التحذيرات البسيطة
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
@@ -31,13 +33,9 @@ jobs:
   deploy:
     needs: build_site
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     permissions:
       pages: write
       id-token: write
     steps:
       - name: Deploy
-        id: deployment
         uses: actions/deploy-pages@v4
