@@ -3,8 +3,8 @@
 A modern, lightweight web application built with **React** and **React Router** to help users track their daily calorie intake. The app features a clean UI, persistent storage using LocalStorage, and dynamic data management.
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB )
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white )
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black )
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white )
 
 ## 🚀 Live Demo
 Check out the live application here:  
@@ -12,22 +12,25 @@ Check out the live application here:
 
 ## ✨ Features
 - **Daily Tracking:** Add and manage food records for specific dates.
-- **Persistent Storage:** Uses `localStorage` to save your data even after refreshing the page or closing the browser.
-- **Dynamic Calculations:** Automatically calculates total calories for the selected day.
-- **Detailed View:** View specific details for each record via dynamic routing (`/:recordId`).
-- **Modern UI:** Responsive design with a clean, user-friendly card-based interface.
-- **CRUD Operations:** Support for adding and deleting records with real-time state updates.
-- **Date Filtering:** Easily filter and view records for any specific day.
+- **Persistent Storage:** Data is saved in `localStorage` (persists after refresh).
+- **Dynamic Calculations:** Real-time total calorie calculation.
+- **Detailed View:** Dedicated pages for each record using dynamic routing.
+- **Modern UI:** Clean, card-based responsive design.
+- **CRUD Operations:** Full support for adding and deleting records.
 
 ## 🛠️ Tech Stack
-- **Frontend:** React.js (Functional Components)
+- **Frontend:** React.js (Functional Components & Hooks)
+- **Build Tool:** Vite
 - **Routing:** React Router v6
-- **State Management:** React Hooks (`useState`, `useEffect`, `useContext`)
-- **Styling:** CSS Modules for component-scoped styling
-- **Storage:** Browser LocalStorage API
+- **State Management:** Context API
+- **Styling:** CSS Modules
 
 ## 📦 Installation & Setup
+
 1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yomnaelsafty/Calorie-Tracker-App.git
+
 2. Navigate to the project directory: cd Calorie-Tracker-App
 3. Install dependencies: npm install
 4. Start the development server: npm start
@@ -49,6 +52,3 @@ This project is MIT licensed.
 
 ## Created with ❤️ by Yomna ElSafty
 
-
-   ```bash
-   git clone https://github.com/yomnaelsafty/Calorie-Tracker-App.git
