@@ -8,36 +8,41 @@ import {
   EditPage,
 } from "./pages";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <PageLayout />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          index: true,
+          element: <LanddingPage />,
+        },
+        {
+          path: "track",
+          children: [
+            {
+              index: true,
+              element: <TrackPage />,
+            },
+            {
+              path: ":recordId",
+              element: <DetailPage />,
+            },
+            {
+              path: "create",
+              element: <EditPage />,
+            },
+          ],
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <PageLayout />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        index: true,
-        element: <LanddingPage />,
-      },
-      {
-        path: "track",
-        children: [
-          {
-            index: true,
-            element: <TrackPage />,
-          },
-          {
-            path: ":recordId",
-            element: <DetailPage />,
-          },
-          {
-            path: "create",
-            element: <EditPage />,
-          },
-        ],
-      },
-    ],
+    basename: "/Calorie-Tracker-App",
   },
-]);
+);
 
 function App() {
   return <RouterProvider router={router} />;
