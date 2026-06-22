@@ -1,0 +1,23 @@
+.title {
+  color: var(--theme-color-dark);
+  font-weight: 300;
+  font-size: 42px;
+  width: 100%;
+  text-align: center;
+}
+
+.add-btn {
+  background-color: var(--theme-color-normal);
+  color: var(--theme-background-light);
+  border: none;
+  display: block;
+  border-radius: 15px;
+  padding: 10px;
+  cursor: pointer;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 275px;
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
+}
