@@ -7,10 +7,6 @@ import Button from "../common/Button";
 function CaloriesRecorder(props) {
   const { setTotalCalories: addCalories } = useContext(AppContext);
 
-  if (props.calories < 0) {
-    return null;
-  }
-
   useEffect(() => {
     addCalories((prvTotal) => prvTotal + props.calories);
 
@@ -29,17 +25,8 @@ function CaloriesRecorder(props) {
 
   return (
     <ul className={styles.record}>
-      {props.calories < 0 ? (
-        <>
-          <li></li>
-          <li> Invalid Calories</li>
-        </>
-      ) : (
-        <>
-          <li>{props.meal}</li>
-          <li>{props.content}</li>
-        </>
-      )}
+      <li>{props.meal}</li>
+      <li>{props.content}</li>
 
       <li className={styles["record-calories"]}>
         <StyledRecordCell>{props.calories}</StyledRecordCell>
