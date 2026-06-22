@@ -1,4 +1,4 @@
-import ListingSection from "../components/caloriesRecordSection/listingSection.jsx";
+import ListingSection from "../components/caloriesRecordSection/ListingSection.jsx";
 import styles from "./TrackPage.module.css";
 import { TextContent } from "../components/common/TextContent.jsx";
 import { useLoadData } from "../utils/hooks/index.js";
